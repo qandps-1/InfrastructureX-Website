@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure X</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .heading { font-family: 'Playfair Display', sans-serif; }
+
+        /*
+          IMAGES USED (all in repo root alongside this file):
+          hero-quarry.jpg        -> hero background (aerial quarry/mining photo)
+          about-mining.jpg       -> About section, left photo
+          about-datacenter.jpg   -> About section, right photo
+          focus-bg.jpg           -> Areas of Focus heading section background
+          focus-crypto.jpg       -> Infra-X Crypto card photo
+          focus-minerals.jpg     -> Infra-X Minerals card photo
+          focus-cards-bg.jpg     -> background behind the 4-card row (Power Gen/Data Centers/Compute/Digital Assets)
+          infra-x-logo.jpeg      -> nav logo
+        */
+
+        .card-photo {
+            height: 16rem;
+            background-size: cover;
+            background-position: center;
+        }
+        .info-card {
+            background-color: rgba(255,255,255,0.97);
+            color: #1a1a1a;
+        }
+    </style>
+</head>
+<body class="bg-[#16233F] text-white">
+
+    <!-- NAV -->
+    <nav class="fixed w-full bg-[#3B69BF]/95 backdrop-blur z-50">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 py-4 md:py-5 flex justify-between items-center">
+            <a href="index.html">
+                <img src="infra-x-logo.jpeg" alt="Infrastructure X Logo" class="h-14 md:h-20 rounded">
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="index.html" class="border-b-2 border-white pb-1">HOME</a>
+                <a href="team.html" class="hover:text-blue-200">OUR TEAM</a>
+                <a href="bios.html" class="hover:text-blue-200">BIOS</a>
+                <a href="contact.html" class="hover:text-blue-200">CONTACT</a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-white text-3xl leading-none px-2" aria-label="Toggle menu">☰</button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-[#3B69BF] border-t border-white/20 px-6 py-4 space-y-4 text-sm font-medium">
+            <a href="index.html" class="block">HOME</a>
+            <a href="team.html" class="block hover:text-blue-200">OUR TEAM</a>
+            <a href="bios.html" class="block hover:text-blue-200">BIOS</a>
+            <a href="contact.html" class="block hover:text-blue-200">CONTACT</a>
+        </div>
+    </nav>
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuBtn.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✕';
+        });
+    </script>
+
+    <!-- HERO -->
+    <section class="min-h-screen flex items-end pb-24 px-6 md:px-8 relative" style="background-image: url('hero-quarry.jpg'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/10"></div>
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <h1 class="heading text-4xl md:text-6xl font-bold leading-tight mb-6">
+                Investing in Tomorrow's Infrastructure Today
+            </h1>
+            <p class="text-base md:text-lg max-w-2xl mx-auto text-zinc-100">
+                Empowering global economic growth through strategic investments in game changing infrastructure innovations.
+            </p>
+        </div>
+    </section>
+
+    <!-- ABOUT + MISSION -->
+    <section class="bg-[#16233F] px-6 md:px-8 py-20">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-20">
+            <div>
+                <h2 class="heading text-4xl md:text-5xl font-bold mb-6">About Infrastructure X</h2>
+                <p class="text-zinc-200 leading-relaxed">Infrastructure X (Infra-X) was founded in 2025 in Phoenix, Arizona. Infra-X invests innovative infrastructure solutions through strategic operations, relationships and partnerships. Since its inception, the company has focused on developing sustainable development, leveraging cutting-edge technology to build resilient infrastructure for the future. With a team of industry experts, Infra-X is committed to driving economic growth and environmental stewardship through large-scale projects in energy, transportation, and urban development.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="rounded-2xl overflow-hidden h-64 md:h-80" style="background-image:url('about-mining.jpg'); background-size:cover; background-position:center;"></div>
+                <div class="rounded-2xl overflow-hidden h-64 md:h-80" style="background-image:url('about-datacenter.jpg'); background-size:cover; background-position:center;"></div>
+            </div>
+        </div>
+
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="heading text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
+            <p class="text-zinc-200 leading-relaxed">At Infra-X, our mission is to advance extreme value-driven infrastructure investments and solutions to support superior financial returns, local economic growth and community transformation. We are committed to pioneering development through cutting-edge strategic partnerships and responsible resource management. Our goal is to create lasting impact by integrating environmental stewardship with economic prosperity, ensuring that every project contributes to the long-term well being of the communities we serve while delivering exceptional value to our stakeholders.</p>
+        </div>
+    </section>
+
+    <!-- AREAS OF FOCUS: heading + crypto/minerals cards -->
+    <section class="relative px-6 md:px-8 py-20" style="background-image:url('focus-bg.jpg'); background-size:cover; background-position:center;">
+        <div class="absolute inset-0 bg-black/55"></div>
+        <div class="max-w-6xl mx-auto relative z-10">
+            <h2 class="heading text-4xl md:text-5xl font-bold text-center mb-4">Areas of Focus</h2>
+            <p class="text-center text-zinc-100 max-w-2xl mx-auto mb-14">At Infrastructure X, we specialize in strategic investments and projects across diverse infrastructure sectors.</p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="rounded-2xl overflow-hidden shadow-xl">
+                    <div class="card-photo" style="background-image:url('focus-crypto.jpg');"></div>
+                    <div class="info-card p-8">
+                        <h3 class="text-xl font-semibold mb-3">Infra-X Crypto</h3>
+                        <p class="text-sm leading-relaxed text-zinc-700">Infra-X Crypto focuses on standard gas and cheap energy to power mining operations. This model partners with local governments to ensure productivity and sustainability.</p>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-xl">
+                    <div class="card-photo" style="background-image:url('focus-minerals.jpg');"></div>
+                    <div class="info-card p-8">
+                        <h3 class="text-xl font-semibold mb-3">Infra-X Minerals</h3>
+                        <p class="text-sm leading-relaxed text-zinc-700">Infra-X Minerals invests in international mines for copper, tin and cobalt. These resources support both mining and digital asset infrastructure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AREAS OF FOCUS: 4-card row -->
+    <section class="relative px-6 md:px-8 py-20" style="background-image:url('focus-cards-bg.jpg'); background-size:cover; background-position:center;">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="max-w-6xl mx-auto relative z-10 grid sm:grid-cols-2 gap-8">
+            <div class="info-card rounded-2xl p-8">
+                <h3 class="text-xl font-semibold mb-3 text-center">Infra-X Power Generation</h3>
+                <p class="text-sm leading-relaxed text-zinc-700 text-center">Infra-X Power Generation provides energy to underdeveloped regions. This supports community growth with reliable affordable energy.</p>
+            </div>
+            <div class="info-card rounded-2xl p-8">
+                <h3 class="text-xl font-semibold mb-3 text-center">Infra-X Data Centers</h3>
+                <p class="text-sm leading-relaxed text-zinc-700 text-center">Infra-X Data Centers are placed near mineral mines for efficiency. They leverage geothermal power for secure digital storage operations.</p>
+            </div>
+            <div class="info-card rounded-2xl p-8">
+                <h3 class="text-xl font-semibold mb-3 text-center">Infra-X Compute</h3>
+                <p class="text-sm leading-relaxed text-zinc-700 text-center">Infra-X is developing a next-generation computer chip. It will solve complex problems using advanced, innovative infrastructure.</p>
+            </div>
+            <div class="info-card rounded-2xl p-8">
+                <h3 class="text-xl font-semibold mb-3 text-center">Infra-X Digital Assets</h3>
+                <p class="text-sm leading-relaxed text-zinc-700 text-center">Infra-X Digital Assets allocates capital to blockchain infrastructure. This includes funding decentralized platforms and custody solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-16 px-6 text-center bg-[#16233F] border-t border-white/10">
+        <h3 class="heading text-2xl font-bold mb-2">Infrastructure X</h3>
+        <p class="text-zinc-300 mb-1">Investing in Tomorrow's Infrastructure Today</p>
+        <p class="text-zinc-400 text-sm">Est: 2025, Phoenix, AZ</p>
+    </footer>
+
+</body>
+</html>
