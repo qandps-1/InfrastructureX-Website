@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Infrastructure X</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .heading { font-family: 'Playfair Display', sans-serif; }
+
+        /*
+          FORMSPREE ID NEEDED:
+          The form action below uses a PLACEHOLDER ID (YOUR_FORM_ID).
+          Preston: create a brand-new form at formspree.io (~2 min) and swap
+          it in below. Do NOT reuse ACP's or Eagle Trident's form ID.
+        */
+    </style>
+</head>
+<body class="bg-[#16233F] text-white">
+
+    <!-- NAV -->
+    <nav class="fixed w-full bg-[#3B69BF]/95 backdrop-blur z-50">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 py-4 md:py-5 flex justify-between items-center">
+            <a href="index.html">
+                <img src="infra-x-logo.jpeg" alt="Infrastructure X Logo" class="h-14 md:h-20 rounded">
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-blue-200">HOME</a>
+                <a href="team.html" class="hover:text-blue-200">OUR TEAM</a>
+                <a href="bios.html" class="hover:text-blue-200">BIOS</a>
+                <a href="contact.html" class="border-b-2 border-white pb-1">CONTACT</a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-white text-3xl leading-none px-2" aria-label="Toggle menu">☰</button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-[#3B69BF] border-t border-white/20 px-6 py-4 space-y-4 text-sm font-medium">
+            <a href="index.html" class="block hover:text-blue-200">HOME</a>
+            <a href="team.html" class="block hover:text-blue-200">OUR TEAM</a>
+            <a href="bios.html" class="block hover:text-blue-200">BIOS</a>
+            <a href="contact.html" class="block">CONTACT</a>
+        </div>
+    </nav>
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuBtn.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✕';
+        });
+    </script>
+
+    <section class="relative min-h-screen flex items-center pt-32 pb-20 px-6 md:px-8" style="background-image:url('contact-bg.jpg'); background-size:cover; background-position:center;">
+        <div class="absolute inset-0 bg-[#0b1220]/75"></div>
+
+        <div class="max-w-2xl mx-auto relative z-10 text-center w-full">
+            <h1 class="heading text-5xl md:text-6xl font-bold mb-4">Contact Us</h1>
+            <p class="text-zinc-200 mb-12">Get in touch with Infra-X for investment inquiries.</p>
+
+            <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="bg-white text-[#1a1a1a] rounded-3xl p-8 md:p-10 text-left space-y-6" onsubmit="handleSubmit(event)">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Your First Name</label>
+                    <input type="text" name="first_name" placeholder="Enter your first name"
+                        class="w-full border border-zinc-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#3B69BF]">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Your Email Address*</label>
+                    <input type="email" name="email" required placeholder="Enter your email address"
+                        class="w-full border border-zinc-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#3B69BF]">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Your Message*</label>
+                    <textarea name="message" required rows="5" placeholder="Type your message here"
+                        class="w-full border border-zinc-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#3B69BF]"></textarea>
+                </div>
+                <button type="submit" id="submitBtn"
+                    class="w-full bg-[#3B69BF] hover:bg-[#2f56a0] text-white font-semibold py-4 rounded-full text-lg transition">
+                    Submit Your Inquiry
+                </button>
+                <p id="formMsg" class="hidden text-sm pt-1 text-center text-green-700">Message sent! We will be in touch soon.</p>
+                <p id="formErr" class="hidden text-sm pt-1 text-center text-red-600">Something went wrong. Please try again or email us directly.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-16 px-6 text-center bg-[#16233F] border-t border-white/10">
+        <h3 class="heading text-2xl font-bold mb-2">Infrastructure X</h3>
+        <p class="text-zinc-300 mb-1">Investing in Tomorrow's Infrastructure Today</p>
+        <p class="text-zinc-400 text-sm">Est: 2025, Phoenix, AZ</p>
+    </footer>
+
+    <script>
+        async function handleSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const msg = document.getElementById('formMsg');
+            const err = document.getElementById('formErr');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+
+            try {
+                const res = await fetch(e.target.action, {
+                    method: 'POST',
+                    body: new FormData(e.target),
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (res.ok) {
+                    msg.classList.remove('hidden');
+                    err.classList.add('hidden');
+                    e.target.reset();
+                } else {
+                    throw new Error('Failed');
+                }
+            } catch {
+                err.classList.remove('hidden');
+                msg.classList.add('hidden');
+            } finally {
+                btn.textContent = 'Submit Your Inquiry';
+                btn.disabled = false;
+            }
+        }
+    </script>
+
+</body>
+</html>
