@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bios - Infrastructure X</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .heading { font-family: 'Playfair Display', sans-serif; }
+        .headshot-placeholder { background: linear-gradient(135deg, #2c3e5c 0%, #16233F 100%); }
+        /* scroll offset so fixed nav doesn't cover the anchor target */
+        .bio-anchor { scroll-margin-top: 110px; }
+    </style>
+</head>
+<body class="bg-white text-[#1a1a1a]">
+
+    <!-- NAV -->
+    <nav class="fixed w-full bg-[#3B69BF]/95 backdrop-blur z-50">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 py-4 md:py-5 flex justify-between items-center">
+            <a href="index.html">
+                <img src="infra-x-logo.jpeg" alt="Infrastructure X Logo" class="h-14 md:h-20 rounded">
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-white">
+                <a href="index.html" class="hover:text-blue-200">HOME</a>
+                <a href="team.html" class="hover:text-blue-200">OUR TEAM</a>
+                <a href="bios.html" class="border-b-2 border-white pb-1">BIOS</a>
+                <a href="contact.html" class="hover:text-blue-200">CONTACT</a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-white text-3xl leading-none px-2" aria-label="Toggle menu">☰</button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-[#3B69BF] border-t border-white/20 px-6 py-4 space-y-4 text-sm font-medium text-white">
+            <a href="index.html" class="block hover:text-blue-200">HOME</a>
+            <a href="team.html" class="block hover:text-blue-200">OUR TEAM</a>
+            <a href="bios.html" class="block">BIOS</a>
+            <a href="contact.html" class="block hover:text-blue-200">CONTACT</a>
+        </div>
+    </nav>
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuBtn.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✕';
+        });
+    </script>
+
+    <div class="pt-32 md:pt-40 pb-4 px-6 md:px-8 max-w-6xl mx-auto text-center">
+        <h1 class="heading text-5xl md:text-6xl font-bold">Bios</h1>
+    </div>
+
+    <!-- DNA banner -->
+    <section class="mt-10 h-56 md:h-80" style="background-image:url('bios-dna.jpg'); background-size:cover; background-position:center;"></section>
+
+    <div class="max-w-6xl mx-auto px-6 md:px-8 py-20 space-y-24">
+
+        <!-- Robert (Bob) Smith -->
+        <div id="robert-smith" class="bio-anchor grid md:grid-cols-12 gap-10 items-start">
+            <div class="md:col-span-4 lg:col-span-3">
+                <div class="rounded-2xl overflow-hidden aspect-square" style="background-image:url('headshot-bob.jpg'); background-size:cover; background-position:center;"></div>
+                <h3 class="text-xl font-semibold mt-4">Bob Smith</h3>
+                <p class="text-[#3B69BF] font-medium">Founder / CEO</p>
+            </div>
+            <div class="md:col-span-8 lg:col-span-9 text-sm md:text-base leading-relaxed space-y-4 text-zinc-800">
+                <p>Robert (Bob) Smith is the founder and Principal of Adobe Capital Partners, a diversified infrastructure company focused on energy services, data center development, industrial mining, advanced computing, aviation and financial services. He is also founder and CEO of Infrastructure X, a family office driving transformative innovation in energy technology, medical and bio advancements, defense technologies, AI, quantum computing, and financial technology. With 30 years as a public company executive, he blends strategic vision, legal expertise, and active investment acumen across private equity, venture capital, venture debt, hedge funds, and real estate development—including multi-use projects, data centers, industrial parks, shopping centers, and multi-family housing. Smith's influence extends to advisory roles with leading funds and companies like Smart Energy Water, Asterozoa Capital Partners, AZ VC Fund, Energy Impact Partners, The Westly Group, Enertech Capital, Janus Healthcare, QuSecure, and Trend Discovery, leveraging his network of C-suite energy leaders and top global bankers to fuel high-impact deals.</p>
+                <p>Previously, Smith served as executive vice president, general counsel, and chief development officer at Pinnacle West Capital Corporation and Arizona Public Service, overseeing growth strategies, legal affairs and non-regulated subsidiaries like El Dorado Investment Corporation, Bright Canyon Energy and Pinnacle West Power (50% stake in TransCanyon with Berkshire Hathaway). Prior to joining Pinnacle, he led the $13 billion sale of Columbia Pipeline Group after its double IPO spin-off from NiSource, and has held previous roles at Columbia Pipeline, NiSource, Progress Energy (now Duke Energy), and Mirant Corporation. A graduate of The Ohio State University (J.D.) and the University of South Alabama (B.A.), Smith chairs Global Action, serves on the Advisory Board of Grand Canyon University's Colangelo College of Business, and leads Operation WorldChangers, World Impact Centers, and the Sustainable Missions Project to empower visionary leaders globally.</p>
+            </div>
+        </div>
+
+        <!-- Rich Smith -->
+        <div id="rich-smith" class="bio-anchor grid md:grid-cols-12 gap-10 items-start">
+            <div class="md:col-span-4 lg:col-span-3">
+                <div class="rounded-2xl overflow-hidden aspect-square" style="background-image:url('headshot-rich.jpg'); background-size:cover; background-position:center;"></div>
+                <h3 class="text-xl font-semibold mt-4">Rich Smith</h3>
+                <p class="text-[#3B69BF] font-medium">Chief Financial Officer</p>
+            </div>
+            <div class="md:col-span-8 lg:col-span-9 text-sm md:text-base leading-relaxed space-y-4 text-zinc-800">
+                <p>Richard Smith is a seasoned financial executive with 30 years of leadership experience at top-tier global financial institutions. Throughout his career, he has held senior roles with an executive-level focus across operations, systems architecture, corporate finance and mergers & acquisitions, consistently driving efficiency, scalability and enterprise value. Smith has overseen complex organizational structures and has been directly responsible for managing over $1 billion in annual payments, including end-to-end responsibility for mission-critical divisional operations. He has played a central role in multiple strategic transactions, including pre-merger analysis and positioning, contract review and post-merger integrations—frequently working alongside legal counsel and internal boards to deliver shareholder-aligned outcomes.</p>
+                <p>Known for his pragmatic approach and deep operational insight, Richard brings a unique combination of institutional rigor and innovation, helping complex organizations navigate growth, change, and regulatory landscapes. His track record in optimizing financial operations and leading strategic initiatives makes him a high-value partner for investors and institutions seeking disciplined, forward-thinking leadership.</p>
+                <p>Richard is a husband, father of three and co-founder of House of Grace, a transition home and program for young adult women in Guatemala who have aged out of orphanages.</p>
+            </div>
+        </div>
+
+        <!-- Preston Smith -->
+        <div id="preston-smith" class="bio-anchor grid md:grid-cols-12 gap-10 items-start">
+            <div class="md:col-span-4 lg:col-span-3">
+                <div class="rounded-2xl overflow-hidden aspect-square" style="background-image:url('headshot-preston.jpg'); background-size:cover; background-position:center;"></div>
+                <h3 class="text-xl font-semibold mt-4">Preston Smith</h3>
+                <p class="text-[#3B69BF] font-medium">Chief of Staff</p>
+            </div>
+            <div class="md:col-span-8 lg:col-span-9 text-sm md:text-base leading-relaxed space-y-4 text-zinc-800">
+                <p>Preston Smith serves as the Chief Investment Officer of Adobe Capital Partners and a Principal of Transform Capital Partners, a joint family office. With a strategic focus on innovative and high-growth industries, Preston oversees a diversified investment portfolio spanning technology, artificial intelligence, defense, data centers, healthcare technology, real estate (including smart cities), quantum computing and advanced energy. His leadership drives transformative opportunities across these sectors, leveraging a disciplined approach to capital allocation and long-term value creation.</p>
+                <p>Preston brings a decade of stock and options trading, complemented by investments in a robust portfolio of industrial, commercial, and residential real estate holdings across Arizona, Texas, and North Carolina. His investment acumen is underpinned by a bachelor's degree from Arizona State University, which he earned following two years of studying Business at Palm Beach Atlantic University.</p>
+                <p>Beyond his investment leadership, Preston is deeply committed to global community development. As Director of Operations for the Sustainable Missions Project, he empowers community leaders in developing nations through bi-vocational training and sustainable, mission-driven initiatives. Additionally, he serves as director of the G6 World Changers Group, a network of high-net-worth Christian business leaders dedicated to driving global impact through philanthropy and mission-focused endeavors.</p>
+            </div>
+        </div>
+
+        <!-- Wendy Smith -->
+        <div id="wendy-smith" class="bio-anchor grid md:grid-cols-12 gap-10 items-start">
+            <div class="md:col-span-4 lg:col-span-3">
+                <div class="rounded-2xl overflow-hidden aspect-square" style="background-image:url('headshot-wendy.jpg'); background-size:cover; background-position:center;"></div>
+                <h3 class="text-xl font-semibold mt-4">Wendy Smith</h3>
+                <p class="text-[#3B69BF] font-medium">Chief Giving Officer</p>
+            </div>
+            <div class="md:col-span-8 lg:col-span-9 text-sm md:text-base leading-relaxed space-y-4 text-zinc-800">
+                <p>Wendy Smith serves as Chief Giving Officer, bringing a lifelong passion for service, community impact, and meaningful connection to the role. With a background that spans education, public service, business, and nonprofit work, she is dedicated to advancing initiatives that inspire generosity and create lasting change.</p>
+                <p>Her career began in the classroom, teaching in both public and private schools, where she cultivated a gift for engaging and empowering others. She later served as Director of Operations for an Arizona attorney general campaign, where she successfully organized fundraising efforts and community outreach events to raise awareness on pressing political and social issues. In addition, she has worked as a Realtor, helping families achieve their goals while strengthening community ties.</p>
+                <p>Beyond her professional work, Wendy has devoted significant time to service. She has volunteered with a global mission organization and has been a Court Appointed Special Advocate (CASA) for children in Arizona's foster care system. Throughout these roles, she has planned and carried out a wide range of fundraising events and awareness initiatives designed to mobilize support, foster engagement, and build stronger communities.</p>
+                <p>As Chief Giving Officer, Wendy draws on this rich blend of experiences to lead with empathy, vision, and purpose—ensuring that giving and community impact remain at the center of every initiative.</p>
+            </div>
+        </div>
+
+        <!-- George Sampas -->
+        <div id="george-sampas" class="bio-anchor grid md:grid-cols-12 gap-10 items-start">
+            <div class="md:col-span-4 lg:col-span-3">
+                <div class="rounded-2xl overflow-hidden aspect-square" style="background-image:url('headshot-george.jpg'); background-size:cover; background-position:center;"></div>
+                <h3 class="text-xl font-semibold mt-4">George Sampas</h3>
+                <p class="text-[#3B69BF] font-medium">Senior Advisor</p>
+            </div>
+            <div class="md:col-span-8 lg:col-span-9 text-sm md:text-base leading-relaxed space-y-4 text-zinc-800">
+                <p>George Sampas received his law degree from The University of Chicago Law School and his Bachelor of Arts from Brown University. George is admitted to practice in the State of New York. George is a partner in Gibson Dunn's New York office. He is the Co-Chair of Gibson Dunn's Mergers & Acquisitions Practice Group and Head of Cross-Border M&A. George's practice focuses on cross-border transactions, unsolicited U.S. and non-U.S. acquisitions and private equity transactions with a specific emphasis in the aviation, aerospace and defense and energy and minerals sectors.</p>
+                <p>George is regularly recognized as a leading advisor having been previously named by Global Counsel as one of its "Highly Recommended M&A Practitioners" and is regularly ranked in legal publications such as New York Super Lawyers, The Legal 500 United States, Euromoney's Guide to the World's Leading Mergers and Acquisitions Lawyers and Who's Who Legal.</p>
+                <p>George represents leading global corporations on their largest, most complex and transformative deals including representations of Alcan, Anheuser-Busch InBev, Aventis, BBA Aviation, BCE, Columbia Pipeline Group, Enbridge, Inco, KPMG, Mitsubishi Tokyo Financial Group, and Vodafone Group, as well as private equity firms and investment advisors.</p>
+                <p>Historic transactions include representing Vodafone on the largest M&A transaction in history, its acquisition of Mannesmann, Elf in its Pac-Man defense and merger with Total, Aventis in its use of a Plavix poison pill warrant to secure better terms from Sanofi, Alcan in its use of new French regulations to allow an unsolicited acquisition of Pechiney and in selling Alcan to Rio Tinto, InBev in its unsolicited acquisition of Anheuser-Busch and subsequently AB InBev in its acquisition of Modelo, Inco in many transactions including its combination agreement with Phelps Dodge and Falconbridge and its sale to Vale.</p>
+            </div>
+        </div>
+
+        <!-- Neal Kissel -->
+        <div id="neal-kissel" class="bio-anchor grid md:grid-cols-12 gap-10 items-start">
+            <div class="md:col-span-4 lg:col-span-3">
+                <div class="rounded-2xl overflow-hidden aspect-square" style="background-image:url('headshot-neal.jpg'); background-size:cover; background-position:center;"></div>
+                <h3 class="text-xl font-semibold mt-4">Neal Kissel</h3>
+                <p class="text-[#3B69BF] font-medium">Strategic Advisor</p>
+            </div>
+            <div class="md:col-span-8 lg:col-span-9 text-sm md:text-base leading-relaxed space-y-4 text-zinc-800">
+                <p>Neal Kissel has 25 years of experience advising senior executives and corporate brands in the Americas, Asia, and Europe on strategy, organizational design, M&A, and CEO advisory.</p>
+                <p>Neal has played an interim role on client operating boards and executive committees of many clients. He works with clients on enterprise strategy, organizational design and effectiveness, portfolio coherence, resource allocation, mergers and acquisitions, and new markets entry. He frequently works with family-controlled public companies advising on issues such as succession, governance, and board management. Neal has experience across many sectors including financial services and energy. Recent projects have focused on the energy transition, sustainability, and portfolio management.</p>
+                <p>Neal has been a guest lecturer at the London Business School, authored several articles, been a contributor to the <em>Financial Times</em> and <em>Telegraph</em> and published in Harvard Business Review and Forbes on management topics.</p>
+            </div>
+        </div>
+
+        <!-- Anna Sampas -->
+        <div id="anna-sampas" class="bio-anchor grid md:grid-cols-12 gap-10 items-start">
+            <div class="md:col-span-4 lg:col-span-3">
+                <div class="rounded-2xl overflow-hidden aspect-square" style="background-image:url('headshot-anna.jpg'); background-size:cover; background-position:center;"></div>
+                <h3 class="text-xl font-semibold mt-4">Anna Sampas</h3>
+                <p class="text-[#3B69BF] font-medium">IP Advisor</p>
+            </div>
+            <div class="md:col-span-8 lg:col-span-9 text-sm md:text-base leading-relaxed space-y-4 text-zinc-800">
+                <p>Anna Sampas graduated from Harvard Law School in 1994. She embarked on a career that encompasses a variety of leadership roles in fields ranging from IT to rental properties. Much of her career has been spent in intellectual property licensing. She led the intellectual property transactions practice at Sullivan & Cromwell where she worked closely with MPEG LA, the first patent pool licensing company (now a part of VIA LA Licensing) and Thompson Licensing, which licensed the extensive patent portfolio of what was then Thompson SA. She also represented SK Hynix in various semiconductor licensing projects, including its first relationship with TSMC.</p>
+                <p>Anna was also the lead technology lawyer for NBC Universal from 2007 to 2012 negotiating a wide range of in-bound software, development, service and hardware agreements, as well as leading the documentation of various internet services and advertising relationships. She developed the East Coast legal team for technology acquisition, internet advertising and managed the legal aspects of adding emerging technologies to the NBC business.</p>
+                <p>In addition, Anna has deep entrepreneurial experience. While working as an attorney, and then later full time, Anna developed a real estate business where she purchased, renovated and rented residential and vacation apartments and homes. Early in her career, she was general counsel of an IT services company which was seeking to leverage ties to an Indian IT and services labor pool to develop chat center services. Currently, in addition to her role at InfraX AI, Anna is bringing together her entrepreneurial experience and her service to her community (which in the past included serving on the Board of the Brooklyn Academy of Music and several education related projects) to found and grow, Dåna Pada, a charity that sends trained therapists, teachers and doctors to assist children with special needs in third world countries.</p>
+            </div>
+        </div>
+
+        <!-- Robin Bloomfield -->
+        <div id="robin-bloomfield" class="bio-anchor grid md:grid-cols-12 gap-10 items-start">
+            <div class="md:col-span-4 lg:col-span-3">
+                <div class="rounded-2xl overflow-hidden aspect-square" style="background-image:url('headshot-robin.jpg'); background-size:cover; background-position:center;"></div>
+                <h3 class="text-xl font-semibold mt-4">Robin Bloomfield</h3>
+                <p class="text-[#3B69BF] font-medium">Director of Operations</p>
+            </div>
+            <div class="md:col-span-8 lg:col-span-9 text-sm md:text-base leading-relaxed space-y-4 text-zinc-800">
+                <p>Robin Bloomfield has over 20 years of experience in the legal field and in office administration and management. She brings with her a wealth of knowledge and leadership to every role she undertakes. Her background spans a wide range of legal practices, including state and federal litigation, medical malpractice law, personal injury law, employment law, school administration law, school financial regulations and school election law. This diverse expertise has equipped her with a deep understanding of complex legal operations and the ability to manage multifaceted projects with precision.</p>
+                <p>Robin is known for her exceptional organizational skills, key attention to detail, and a results-driven approach. She excels at managing operations, streamlining processes, and ensuring that projects are seen through to successful completion. Her time management and ability to prioritize make her a reliable leader in fast-paced, high-stakes environments.</p>
+                <p>Beyond her professional accomplishments, Robin is a dedicated community member. She has been an active volunteer in her church, community and local public schools, serving as PTO treasurer, fundraising & event coordinator and volunteering as a Reading Recovery Coordinator, where she organized and led community volunteers to support early literacy initiatives. Her commitment to service, both in and out of the office, reflects her collaborative spirit and strong leadership. Robin's blend of legal expertise, operational savvy, and community involvement, make her a dynamic and dependable force in any organization.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="py-16 px-6 text-center bg-[#16233F] text-white border-t border-white/10">
+        <h3 class="heading text-2xl font-bold mb-2">Infrastructure X</h3>
+        <p class="text-zinc-300 mb-1">Investing in Tomorrow's Infrastructure Today</p>
+        <p class="text-zinc-400 text-sm">Est: 2025, Phoenix, AZ</p>
+    </footer>
+
+</body>
+</html>
