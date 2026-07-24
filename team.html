@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Infrastructure X</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .heading { font-family: 'Playfair Display', sans-serif; }
+
+        /*
+          IMAGES NEEDED IN REPO ROOT:
+          All headshots (headshot-bob.jpg, headshot-rich.jpg, headshot-preston.jpg,
+          headshot-wendy.jpg, headshot-george.jpg, headshot-neal.jpg, headshot-anna.jpg,
+          headshot-robin.jpg) + tunnel-mining.jpg are provided and ready to use.
+        */
+        .headshot-placeholder {
+            background: linear-gradient(135deg, #2c3e5c 0%, #16233F 100%);
+        }
+        .bio-btn {
+            background: rgba(0,0,0,0.85);
+        }
+    </style>
+</head>
+<body class="bg-white text-[#1a1a1a]">
+
+    <!-- NAV -->
+    <nav class="fixed w-full bg-[#3B69BF]/95 backdrop-blur z-50">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 py-4 md:py-5 flex justify-between items-center">
+            <a href="index.html">
+                <img src="infra-x-logo.jpeg" alt="Infrastructure X Logo" class="h-14 md:h-20 rounded">
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-white">
+                <a href="index.html" class="hover:text-blue-200">HOME</a>
+                <a href="team.html" class="border-b-2 border-white pb-1">OUR TEAM</a>
+                <a href="bios.html" class="hover:text-blue-200">BIOS</a>
+                <a href="contact.html" class="hover:text-blue-200">CONTACT</a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-white text-3xl leading-none px-2" aria-label="Toggle menu">☰</button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-[#3B69BF] border-t border-white/20 px-6 py-4 space-y-4 text-sm font-medium text-white">
+            <a href="index.html" class="block hover:text-blue-200">HOME</a>
+            <a href="team.html" class="block">OUR TEAM</a>
+            <a href="bios.html" class="block hover:text-blue-200">BIOS</a>
+            <a href="contact.html" class="block hover:text-blue-200">CONTACT</a>
+        </div>
+    </nav>
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuBtn.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✕';
+        });
+    </script>
+
+    <div class="pt-32 md:pt-40 pb-8 px-6 md:px-8 max-w-6xl mx-auto">
+        <h1 class="heading text-5xl md:text-6xl font-bold text-center mb-16">Our Team</h1>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+
+            <div class="text-center">
+                <div class="relative rounded-xl overflow-hidden aspect-square mb-3">
+                    <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('headshot-bob.jpg');"></div>
+                    <a href="bios.html#robert-smith" class="bio-btn absolute bottom-3 left-1/2 -translate-x-1/2 text-white text-xs font-medium px-4 py-1.5 rounded-full">Bio</a>
+                </div>
+                <h3 class="font-semibold">Robert Smith</h3>
+                <p class="text-sm text-zinc-600">Founder/CEO</p>
+            </div>
+
+            <div class="text-center">
+                <div class="relative rounded-xl overflow-hidden aspect-square mb-3">
+                    <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('headshot-rich.jpg');"></div>
+                    <a href="bios.html#rich-smith" class="bio-btn absolute bottom-3 left-1/2 -translate-x-1/2 text-white text-xs font-medium px-4 py-1.5 rounded-full">Bio</a>
+                </div>
+                <h3 class="font-semibold">Rich Smith</h3>
+                <p class="text-sm text-zinc-600">Chief Financial Officer</p>
+            </div>
+
+            <div class="text-center">
+                <div class="relative rounded-xl overflow-hidden aspect-square mb-3">
+                    <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('headshot-preston.jpg');"></div>
+                    <a href="bios.html#preston-smith" class="bio-btn absolute bottom-3 left-1/2 -translate-x-1/2 text-white text-xs font-medium px-4 py-1.5 rounded-full">Bio</a>
+                </div>
+                <h3 class="font-semibold">Preston Smith</h3>
+                <p class="text-sm text-zinc-600">Chief of Staff</p>
+            </div>
+
+            <div class="text-center">
+                <div class="relative rounded-xl overflow-hidden aspect-square mb-3">
+                    <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('headshot-wendy.jpg');"></div>
+                    <a href="bios.html#wendy-smith" class="bio-btn absolute bottom-3 left-1/2 -translate-x-1/2 text-white text-xs font-medium px-4 py-1.5 rounded-full">Bio</a>
+                </div>
+                <h3 class="font-semibold">Wendy Smith</h3>
+                <p class="text-sm text-zinc-600">Chief Giving Officer</p>
+            </div>
+
+            <div class="text-center">
+                <div class="relative rounded-xl overflow-hidden aspect-square mb-3">
+                    <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('headshot-george.jpg');"></div>
+                    <a href="bios.html#george-sampas" class="bio-btn absolute bottom-3 left-1/2 -translate-x-1/2 text-white text-xs font-medium px-4 py-1.5 rounded-full">Bio</a>
+                </div>
+                <h3 class="font-semibold">George Sampas</h3>
+                <p class="text-sm text-zinc-600">Senior Advisor</p>
+            </div>
+
+            <div class="text-center">
+                <div class="relative rounded-xl overflow-hidden aspect-square mb-3">
+                    <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('headshot-neal.jpg');"></div>
+                    <a href="bios.html#neal-kissel" class="bio-btn absolute bottom-3 left-1/2 -translate-x-1/2 text-white text-xs font-medium px-4 py-1.5 rounded-full">Bio</a>
+                </div>
+                <h3 class="font-semibold">Neal Kissel</h3>
+                <p class="text-sm text-zinc-600">Strategic Advisor</p>
+            </div>
+
+            <div class="text-center">
+                <div class="relative rounded-xl overflow-hidden aspect-square mb-3">
+                    <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('headshot-anna.jpg');"></div>
+                    <a href="bios.html#anna-sampas" class="bio-btn absolute bottom-3 left-1/2 -translate-x-1/2 text-white text-xs font-medium px-4 py-1.5 rounded-full">Bio</a>
+                </div>
+                <h3 class="font-semibold">Anna Sampas</h3>
+                <p class="text-sm text-zinc-600">IP Advisor</p>
+            </div>
+
+            <div class="text-center">
+                <div class="relative rounded-xl overflow-hidden aspect-square mb-3">
+                    <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('headshot-robin.jpg');"></div>
+                    <a href="bios.html#robin-bloomfield" class="bio-btn absolute bottom-3 left-1/2 -translate-x-1/2 text-white text-xs font-medium px-4 py-1.5 rounded-full">Bio</a>
+                </div>
+                <h3 class="font-semibold">Robin Bloomfield</h3>
+                <p class="text-sm text-zinc-600">Director of Operations</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- TUNNEL / MINING BANNER -->
+    <section class="mt-20 h-64 md:h-96" style="background-image:url('tunnel-mining.jpg'); background-size:cover; background-position:center;"></section>
+
+    <!-- FOOTER -->
+    <footer class="py-16 px-6 text-center bg-[#16233F] text-white border-t border-white/10">
+        <h3 class="heading text-2xl font-bold mb-2">Infrastructure X</h3>
+        <p class="text-zinc-300 mb-1">Investing in Tomorrow's Infrastructure Today</p>
+        <p class="text-zinc-400 text-sm">Est: 2025, Phoenix, AZ</p>
+    </footer>
+
+</body>
+</html>
