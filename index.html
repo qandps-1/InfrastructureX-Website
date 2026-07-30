@@ -13,11 +13,8 @@
         /*
           IMAGES USED (all in repo root alongside this file):
           hero-quarry.jpg        -> hero background (aerial quarry/mining photo)
-          about-photo.jpg        -> About section: ONE file, displayed as two boxes.
-                                     Left box shows the left half of this image, right box
-                                     shows the right half (via CSS background-position), so
-                                     if your file already has two photos side-by-side, each
-                                     half will land in its own rounded box automatically.
+          about-mining.jpg       -> About section, left photo (clean mining/excavator photo, no text)
+          about-datacenter.jpg   -> About section, right photo (clean data center corridor photo, no text)
           focus-bg.jpg           -> Areas of Focus heading section background
           focus-crypto.jpg       -> Infra-X Crypto card photo
           focus-minerals.jpg     -> Infra-X Minerals card photo
@@ -89,8 +86,8 @@
                 <p class="text-zinc-200 leading-relaxed">Infrastructure X (Infra-X) was founded in 2025 in Phoenix, Arizona. Infra-X invests innovative infrastructure solutions through strategic operations, relationships and partnerships. Since its inception, the company has focused on developing sustainable development, leveraging cutting-edge technology to build resilient infrastructure for the future. With a team of industry experts, Infra-X is committed to driving economic growth and environmental stewardship through large-scale projects in energy, transportation, and urban development.</p>
             </div>
             <div class="grid grid-cols-2 gap-4">
-                <div class="rounded-2xl overflow-hidden h-64 md:h-80" style="background-image:url('about-photo.jpg'); background-size:200% 100%; background-position:left center;"></div>
-                <div class="rounded-2xl overflow-hidden h-64 md:h-80" style="background-image:url('about-photo.jpg'); background-size:200% 100%; background-position:right center;"></div>
+                <div class="rounded-2xl overflow-hidden h-64 md:h-80" style="background-image:url('about-mining.jpg'); background-size:cover; background-position:center;"></div>
+                <div class="rounded-2xl overflow-hidden h-64 md:h-80" style="background-image:url('about-datacenter.jpg'); background-size:cover; background-position:center;"></div>
             </div>
         </div>
 
