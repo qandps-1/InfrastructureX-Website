@@ -15,10 +15,11 @@
           hero-quarry.jpg        -> hero background (aerial quarry/mining photo)
           about-mining.jpg       -> About section, left photo (clean mining/excavator photo, no text)
           about-datacenter.jpg   -> About section, right photo (clean data center corridor photo, no text)
-          focus-bg.jpg           -> Areas of Focus heading section background
-          focus-crypto.jpg       -> Infra-X Crypto card photo
+          focus-bg.jpg           -> Key Areas of Focus section background
           focus-minerals.jpg     -> Infra-X Minerals card photo
-          focus-cards-bg.jpg     -> background behind the 4-card row (Power Gen/Data Centers/Compute/Digital Assets)
+          focus-advanced-computing.jpg -> Infra-X Advanced Computing card photo (STILL NEEDED)
+          focus-energy.jpg       -> Infra-X Energy Infrastructure card photo (STILL NEEDED)
+          focus-defense.jpg      -> Infra-X Defense Tech card photo (STILL NEEDED)
           infra-x-logo.jpeg      -> nav logo
         */
 
@@ -97,54 +98,46 @@
         </div>
     </section>
 
-    <!-- AREAS OF FOCUS: heading + crypto/minerals cards -->
+    <!-- KEY AREAS OF FOCUS: 4-card grid -->
     <section class="relative px-6 md:px-8 py-20" style="background-image:url('focus-bg.jpg'); background-size:cover; background-position:center;">
         <div class="absolute inset-0 bg-black/55"></div>
         <div class="max-w-6xl mx-auto relative z-10">
-            <h2 class="heading text-4xl md:text-5xl font-bold text-center mb-4">Areas of Focus</h2>
+            <h2 class="heading text-4xl md:text-5xl font-bold text-center mb-4">Key Areas of Focus</h2>
             <p class="text-center text-zinc-100 max-w-2xl mx-auto mb-14">At Infrastructure X, we specialize in strategic investments and projects across diverse infrastructure sectors.</p>
 
             <div class="grid md:grid-cols-2 gap-8 items-stretch">
                 <div class="rounded-2xl overflow-hidden shadow-xl flex flex-col h-full">
-                    <div class="card-photo" style="background-image:url('focus-crypto.jpg');"></div>
-                    <div class="info-card p-8 flex-1 flex flex-col justify-center">
-                        <h3 class="text-xl font-semibold mb-3">Infra-X Crypto</h3>
-                        <p class="text-sm leading-relaxed text-zinc-700">Infra-X Crypto focuses on standard gas and cheap energy to power mining operations. This model partners with local governments to ensure productivity and sustainability.</p>
-                    </div>
-                </div>
-                <div class="rounded-2xl overflow-hidden shadow-xl flex flex-col h-full">
                     <div class="card-photo" style="background-image:url('focus-minerals.jpg');"></div>
                     <div class="info-card p-8 flex-1 flex flex-col justify-center">
                         <h3 class="text-xl font-semibold mb-3">Infra-X Minerals</h3>
-                        <p class="text-sm leading-relaxed text-zinc-700">Infra-X Minerals invests in international mines for copper, tin and cobalt. These resources support both mining and digital asset infrastructure.</p>
+                        <p class="text-sm leading-relaxed text-zinc-700">Infra-X Minerals invests in international mines for Copper, Tin, Tantalum, Lithium and other strategic minerals and metals. These resources support mining infrastructure.</p>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-xl flex flex-col h-full">
+                    <div class="card-photo" style="background-image:url('focus-advanced-computing.jpg');"></div>
+                    <div class="info-card p-8 flex-1 flex flex-col justify-center">
+                        <h3 class="text-xl font-semibold mb-3">Infra-X Advanced Computing</h3>
+                        <p class="text-sm leading-relaxed text-zinc-700">Infra-X Advanced Computing invests in cutting-edge computing infrastructure that powers next-generation applications. These systems support both enterprise scalability and emerging AI-driven demand.</p>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-xl flex flex-col h-full">
+                    <div class="card-photo" style="background-image:url('focus-energy.jpg');"></div>
+                    <div class="info-card p-8 flex-1 flex flex-col justify-center">
+                        <h3 class="text-xl font-semibold mb-3">Infra-X Energy Infrastructure</h3>
+                        <p class="text-sm leading-relaxed text-zinc-700">Infra-X Energy Infrastructure invests in power generation, transmission, and grid modernization projects. These investments deliver reliable, resilient energy for growing communities.</p>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-xl flex flex-col h-full">
+                    <div class="card-photo" style="background-image:url('focus-defense.jpg');"></div>
+                    <div class="info-card p-8 flex-1 flex flex-col justify-center">
+                        <h3 class="text-xl font-semibold mb-3">Infra-X Defense Tech</h3>
+                        <p class="text-sm leading-relaxed text-zinc-700">Infra-X Defense Tech invests in dual-use technologies that serve both commercial innovation and national security needs. These ventures combine cutting-edge capability with mission-critical reliability.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- AREAS OF FOCUS: 4-card row -->
-    <section class="relative px-6 md:px-8 pt-20 pb-28" style="background-image:url('focus-cards-bg.jpg'); background-size:cover; background-position:center;">
-        <div class="absolute inset-0 bg-black/50"></div>
-        <div class="max-w-6xl mx-auto relative z-10 grid sm:grid-cols-2 gap-x-8 gap-y-16">
-            <div class="info-card rounded-2xl p-8">
-                <h3 class="text-xl font-semibold mb-3 text-center">Infra-X Power Generation</h3>
-                <p class="text-sm leading-relaxed text-zinc-700 text-center">Infra-X Power Generation provides energy to underdeveloped regions. This supports community growth with reliable affordable energy.</p>
-            </div>
-            <div class="info-card rounded-2xl p-8">
-                <h3 class="text-xl font-semibold mb-3 text-center">Infra-X Data Centers</h3>
-                <p class="text-sm leading-relaxed text-zinc-700 text-center">Infra-X Data Centers are placed near mineral mines for efficiency. They leverage geothermal power for secure digital storage operations.</p>
-            </div>
-            <div class="info-card rounded-2xl p-8">
-                <h3 class="text-xl font-semibold mb-3 text-center">Infra-X Compute</h3>
-                <p class="text-sm leading-relaxed text-zinc-700 text-center">Infra-X is developing a next-generation computer chip. It will solve complex problems using advanced, innovative infrastructure.</p>
-            </div>
-            <div class="info-card rounded-2xl p-8">
-                <h3 class="text-xl font-semibold mb-3 text-center">Infra-X Digital Assets</h3>
-                <p class="text-sm leading-relaxed text-zinc-700 text-center">Infra-X Digital Assets allocates capital to blockchain infrastructure. This includes funding decentralized platforms and custody solutions.</p>
-            </div>
-        </div>
-    </section>
 
     <!-- FOOTER -->
     <footer class="py-16 px-6 text-center bg-[#16233F] border-t border-white/10">
